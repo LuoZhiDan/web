@@ -3,8 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+    <script src="aop.js"></script>
 </head>
 <body>
 
 </body>
+<script>
+    var getName = function (name) {
+        console.log(name + '2');
+    }
+    
+    getName.before(function (name) {
+        console.log(name);
+    }, this, 'dddd');
+    
+    getName.around(function () {
+        this.begin = new Date().getTime();
+        console.log('开始时间：'+new Date().getTime())
+    }, function(){
+        console.log('结束时间：'+new Date().getTime());
+        console.log('开始时间：'+ this.begin);
+        console.log('执行时间：'+ (new Date().getTime() - this.begin))
+    })
+
+</script>
+
 </html>
