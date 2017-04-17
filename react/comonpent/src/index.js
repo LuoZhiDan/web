@@ -2,8 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import './index.css';
+import Alert from './js/Alert';
+
+
 
 ReactDOM.render(
-  <App />,
+  <Alert />,
   document.getElementById('root')
 );
