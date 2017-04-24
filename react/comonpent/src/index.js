@@ -7,6 +7,6 @@ import Alert from './js/Alert';
 
 
 ReactDOM.render(
-  <Alert />,
+  <Alert string="alert"/>,
   document.getElementById('root')
 );
