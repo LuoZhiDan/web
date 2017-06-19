@@ -5,7 +5,6 @@ import './index.css';
 import Alert from './js/Alert';
 
 
-
 ReactDOM.render(
   <Alert string="alert"/>,
   document.getElementById('root')
