@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+    <script>
+        try {
+            throw  {
+                name : 'typeError',
+                message : 'sssss',
+                remedy : function(){
+                    console.log('ssssssssss')
+                }
+
+            }
+        }catch (e){
+            //通过错误对象进行信息传递
+            //进行信息提示，只限于错误信息提示
+        }
+
+        //定义当前作用域的函数
+
+        var add = (function(scope){
+            var add = function(){
+                console.log(this);
+            }
+            return function(props){
+                add.call(scope, props);
+            }
+
+        }(this));
+
+        add();
+    </script>
+</html>

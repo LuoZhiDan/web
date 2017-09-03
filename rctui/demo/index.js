@@ -6,7 +6,25 @@ import { Form, FormControl, Modal } from 'rctui'
 
 import './index.css'
 
+/**
+* This is the description for my class.
+*
+* @class Demo
+* @constructor
+*/
 class Demo extends Component {
+	/**
+* My method description.  Like other pieces of your comment blocks, 
+* this can span multiple lines.
+*
+* @method methodName
+* @param {String} foo Argument 1
+* @param {Object} config A config object
+* @param {String} config.name The name on the config object
+* @param {Function} config.callback A callback function on the config object
+* @param {Boolean} [extra=false] Do extra, optional work
+* @return {Boolean} Returns true on success
+*/
   render () {
     return (
       <div>
@@ -20,6 +38,16 @@ class Demo extends Component {
       </div>
     )
   }
+  
+  /**
+* My property description.  Like other pieces of your comment blocks, 
+* this can span multiple lines.
+* 
+* @property lll
+* @type {Object}
+* @default "foo"
+*/
+	lll : 55
 }
 
 ReactDOM.render(<Demo />, document.getElementById('demo'))
